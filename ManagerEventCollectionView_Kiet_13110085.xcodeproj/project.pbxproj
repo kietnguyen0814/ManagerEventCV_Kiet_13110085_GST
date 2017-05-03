@@ -14,6 +14,12 @@
 		2E2F3DE91EB9EB26005A43C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2F3DE71EB9EB26005A43C0 /* LaunchScreen.storyboard */; };
 		2E2F3DF41EB9EB26005A43C0 /* ManagerEventCollectionView_Kiet_13110085Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F3DF31EB9EB26005A43C0 /* ManagerEventCollectionView_Kiet_13110085Tests.swift */; };
 		2E2F3DFF1EB9EB26005A43C0 /* ManagerEventCollectionView_Kiet_13110085UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F3DFE1EB9EB26005A43C0 /* ManagerEventCollectionView_Kiet_13110085UITests.swift */; };
+		2E2F3E0F1EB9F5DC005A43C0 /* ManagerEventCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F3E0E1EB9F5DC005A43C0 /* ManagerEventCollectionViewController.swift */; };
+		2E2F3E151EB9F6C6005A43C0 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F3E141EB9F6C6005A43C0 /* Event.swift */; };
+		2E2F3E171EB9F735005A43C0 /* EventLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F3E161EB9F735005A43C0 /* EventLine.swift */; };
+		2E2F3E191EB9F86E005A43C0 /* HeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F3E181EB9F86E005A43C0 /* HeaderSectionView.swift */; };
+		2E2F3E1B1EB9FCD6005A43C0 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F3E1A1EB9FCD6005A43C0 /* EventCollectionViewCell.swift */; };
+		2E2F3E1E1EB9FE42005A43C0 /* EventDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F3E1D1EB9FE42005A43C0 /* EventDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		2E2F3DFA1EB9EB26005A43C0 /* ManagerEventCollectionView_Kiet_13110085UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManagerEventCollectionView_Kiet_13110085UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2F3DFE1EB9EB26005A43C0 /* ManagerEventCollectionView_Kiet_13110085UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerEventCollectionView_Kiet_13110085UITests.swift; sourceTree = "<group>"; };
 		2E2F3E001EB9EB26005A43C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E2F3E0E1EB9F5DC005A43C0 /* ManagerEventCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerEventCollectionViewController.swift; sourceTree = "<group>"; };
+		2E2F3E141EB9F6C6005A43C0 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		2E2F3E161EB9F735005A43C0 /* EventLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventLine.swift; sourceTree = "<group>"; };
+		2E2F3E181EB9F86E005A43C0 /* HeaderSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSectionView.swift; sourceTree = "<group>"; };
+		2E2F3E1A1EB9FCD6005A43C0 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		2E2F3E1D1EB9FE42005A43C0 /* EventDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				2E2F3DDE1EB9EB26005A43C0 /* AppDelegate.swift */,
-				2E2F3DE01EB9EB26005A43C0 /* ViewController.swift */,
-				2E2F3DE21EB9EB26005A43C0 /* Main.storyboard */,
+				2E2F3E111EB9F696005A43C0 /* Model */,
+				2E2F3E1C1EB9FD64005A43C0 /* Controller */,
+				2E2F3E101EB9F5E7005A43C0 /* View */,
 				2E2F3DE51EB9EB26005A43C0 /* Assets.xcassets */,
-				2E2F3DE71EB9EB26005A43C0 /* LaunchScreen.storyboard */,
 				2E2F3DEA1EB9EB26005A43C0 /* Info.plist */,
 			);
 			path = ManagerEventCollectionView_Kiet_13110085;
@@ -123,6 +135,36 @@
 				2E2F3E001EB9EB26005A43C0 /* Info.plist */,
 			);
 			path = ManagerEventCollectionView_Kiet_13110085UITests;
+			sourceTree = "<group>";
+		};
+		2E2F3E101EB9F5E7005A43C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E2F3DE71EB9EB26005A43C0 /* LaunchScreen.storyboard */,
+				2E2F3DE21EB9EB26005A43C0 /* Main.storyboard */,
+				2E2F3E181EB9F86E005A43C0 /* HeaderSectionView.swift */,
+				2E2F3E1A1EB9FCD6005A43C0 /* EventCollectionViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2E2F3E111EB9F696005A43C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E2F3E141EB9F6C6005A43C0 /* Event.swift */,
+				2E2F3E161EB9F735005A43C0 /* EventLine.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2E2F3E1C1EB9FD64005A43C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E2F3DE01EB9EB26005A43C0 /* ViewController.swift */,
+				2E2F3E0E1EB9F5DC005A43C0 /* ManagerEventCollectionViewController.swift */,
+				2E2F3E1D1EB9FE42005A43C0 /* EventDetailTableViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E2F3E0F1EB9F5DC005A43C0 /* ManagerEventCollectionViewController.swift in Sources */,
+				2E2F3E1B1EB9FCD6005A43C0 /* EventCollectionViewCell.swift in Sources */,
+				2E2F3E171EB9F735005A43C0 /* EventLine.swift in Sources */,
+				2E2F3E1E1EB9FE42005A43C0 /* EventDetailTableViewController.swift in Sources */,
 				2E2F3DE11EB9EB26005A43C0 /* ViewController.swift in Sources */,
+				2E2F3E191EB9F86E005A43C0 /* HeaderSectionView.swift in Sources */,
 				2E2F3DDF1EB9EB26005A43C0 /* AppDelegate.swift in Sources */,
+				2E2F3E151EB9F6C6005A43C0 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +555,7 @@
 				2E2F3E051EB9EB26005A43C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E2F3E061EB9EB26005A43C0 /* Build configuration list for PBXNativeTarget "ManagerEventCollectionView_Kiet_13110085Tests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +564,7 @@
 				2E2F3E081EB9EB26005A43C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E2F3E091EB9EB26005A43C0 /* Build configuration list for PBXNativeTarget "ManagerEventCollectionView_Kiet_13110085UITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +573,7 @@
 				2E2F3E0B1EB9EB26005A43C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
