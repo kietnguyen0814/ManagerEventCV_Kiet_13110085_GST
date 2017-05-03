@@ -32,5 +32,25 @@ class EventDetailTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // This will call when user go back ( this view will disappear )
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        event?.title = eventDetailTitleLabel.text!
+        event?.description = eventDetailDesLabel.text!
+    }
+    
+    // UITextFieldDelegate ( Keyboard will  disable when press return )
+    // User must set delegate from this textfield to this view
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // UIScrollViewDelegate ( Keyboard will disable when scroll the UIView )
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        eventDetailDesLabel.resignFirstResponder()
+        eventDetailTitleLabel.resignFirstResponder()
+    }
 
 }

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Manager Event Collection View Controller-->
+        <!--Manager Event-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ManagerEventCollectionViewController" customModule="ManagerEventCollectionView_Kiet_13110085" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,7 +112,7 @@
                             <outlet property="delegate" destination="BYZ-38-t0r" id="ePO-0P-3L7"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="glv-9O-n0s"/>
+                    <navigationItem key="navigationItem" title="Manager Event" id="glv-9O-n0s"/>
                     <connections>
                         <segue destination="hQ9-7G-jXx" kind="show" identifier="ShowDetail" id="M69-It-eUF"/>
                     </connections>
@@ -195,6 +195,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="hQ9-7G-jXx" id="ONe-6K-91C"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
