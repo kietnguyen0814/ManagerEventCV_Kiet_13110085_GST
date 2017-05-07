@@ -46,22 +46,22 @@ class ManagerEventCollectionViewController: UICollectionViewController {
         if Constants.isLoadDataAgain{
             let day: String = Constants.day;
             let event: Event = Constants.event
-            if day == "Sunday" {
+            if day == "Chử Nhật" {
                 eventLines[0].events.append(event);
             }
-            else if day == "Monday" {
+            else if day == "Thứ 2" {
                 eventLines[1].events.append(event)
             }
-            else if day == "Tuesday" {
+            else if day == "Thứ 3" {
                 eventLines[2].events.append(event)
             }
-            else if day == "Wednesday" {
+            else if day == "Thứ 4" {
                 eventLines[3].events.append(event)
             }
-            else if day == "Thursday" {
+            else if day == "Thứ 5" {
                 eventLines[4].events.append(event)
             }
-            else if day == "Friday" {
+            else if day == "Thứ 6" {
                 eventLines[5].events.append(event)
             }
             else  {

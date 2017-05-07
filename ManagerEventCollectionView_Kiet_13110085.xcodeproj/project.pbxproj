@@ -114,12 +114,12 @@
 			isa = PBXGroup;
 			children = (
 				2E2F3DDE1EB9EB26005A43C0 /* AppDelegate.swift */,
+				2E7B5DFC1EBF529700A64A95 /* Constants.swift */,
 				2E2F3E111EB9F696005A43C0 /* Model */,
 				2E2F3E1C1EB9FD64005A43C0 /* Controller */,
 				2E2F3E101EB9F5E7005A43C0 /* View */,
 				2E2F3DE51EB9EB26005A43C0 /* Assets.xcassets */,
 				2E2F3DEA1EB9EB26005A43C0 /* Info.plist */,
-				2E7B5DFC1EBF529700A64A95 /* Constants.swift */,
 			);
 			path = ManagerEventCollectionView_Kiet_13110085;
 			sourceTree = "<group>";

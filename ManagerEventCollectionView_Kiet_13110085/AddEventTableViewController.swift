@@ -8,8 +8,10 @@
 
 import UIKit
 
-class AddEventTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddEventTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate{
 
+    var days = ["Chủ Nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"]
+    var pickDay = UIPickerView()
     @IBOutlet weak var txtFieldDay: UITextField!
     @IBOutlet weak var txtFieldTitle: UITextField!
     @IBOutlet weak var txtViewDescript: UITextView!
@@ -22,14 +24,16 @@ class AddEventTableViewController: UITableViewController, UIImagePickerControlle
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        txtFieldDay.text = Date().dayOfWeek()!
+        //txtFieldDay.text = Date().dayOfWeek()! // Auto set day of week
+        pickDay.delegate = self as? UIPickerViewDelegate
+        pickDay.dataSource = self as? UIPickerViewDataSource
+        txtFieldDay.inputView = pickDay
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     @IBAction func btnSaveAction(_ sender: UIBarButtonItem) {
         if (txtFieldTitle.text!.isEmpty || txtFieldDay.text!.isEmpty || txtViewDescript.text!.isEmpty || imgEvent.image == nil){
@@ -43,7 +47,8 @@ class AddEventTableViewController: UITableViewController, UIImagePickerControlle
             Constants.isLoadDataAgain = true;
             let event: Event = Event(titled: txtFieldTitle.text!, description: txtViewDescript.text!, eventImaged: imgEvent.image!)
             Constants.event = event;
-            Constants.day = Date().dayOfWeek()
+            //Constants.day = Date().dayOfWeek()
+            Constants.day = txtFieldDay.text
             self.navigationController?.popViewController(animated: true)
         }
     }
@@ -88,7 +93,7 @@ class AddEventTableViewController: UITableViewController, UIImagePickerControlle
         picker.dismiss(animated: true, completion: nil)
     }
     
-    // UITextFieldDelegate ( Keyboard will  disable when press return )
+    // MARK: - UITextFieldDelegate ( Keyboard will  disable when press return )
     // User must set delegate from this textfield to this view
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -102,7 +107,28 @@ class AddEventTableViewController: UITableViewController, UIImagePickerControlle
         txtFieldDay.resignFirstResponder()
     }
     
+    //MARK: - Pick Day
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return days.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        txtFieldDay.text = days[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return days[row]
+    }
+    
+    
+    
 }
+
+// MARK: - Auto set day of week
 extension Date {
     func dayOfWeek() -> String? {
         let dateFormatter = DateFormatter()
