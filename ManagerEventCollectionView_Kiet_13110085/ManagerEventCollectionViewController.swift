@@ -32,6 +32,8 @@ class ManagerEventCollectionViewController: UICollectionViewController {
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
+        
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +42,37 @@ class ManagerEventCollectionViewController: UICollectionViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        collectionView?.reloadData()
+        
+        if Constants.isLoadDataAgain{
+            let day: String = Constants.day;
+            let event: Event = Constants.event
+            if day == "Sunday" {
+                eventLines[0].events.append(event);
+            }
+            else if day == "Monday" {
+                eventLines[1].events.append(event)
+            }
+            else if day == "Tuesday" {
+                eventLines[2].events.append(event)
+            }
+            else if day == "Wednesday" {
+                eventLines[3].events.append(event)
+            }
+            else if day == "Thursday" {
+                eventLines[4].events.append(event)
+            }
+            else if day == "Friday" {
+                eventLines[5].events.append(event)
+            }
+            else  {
+                eventLines[6].events.append(event)
+            }
+            // eventInDays = EventInDay.eventInDays()
+            collectionView?.reloadData()
+            Constants.isLoadDataAgain = false;
+        } else {
+            collectionView?.reloadData()
+        }
     }
     /*
     // MARK: - Navigation
@@ -73,6 +105,8 @@ class ManagerEventCollectionViewController: UICollectionViewController {
         cell.configCellWith(event: event)
         return cell;
     }
+    
+    
 
     //MARK: - Config Header Section Cell
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -90,6 +124,12 @@ class ManagerEventCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         self.performSegue(withIdentifier: StoryBoard.showDetailSegue, sender: indexPath);
+        
+        /*let cell = collectionView.cellForItem(at: indexPath)
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [], animations: ({
+            
+            cell?.frame = collectionView.bounds
+        }), completion: nil)*/
     }
     
     // MARK: - Event Detail
@@ -108,5 +148,4 @@ class ManagerEventCollectionViewController: UICollectionViewController {
             
         }
     }
-
 }

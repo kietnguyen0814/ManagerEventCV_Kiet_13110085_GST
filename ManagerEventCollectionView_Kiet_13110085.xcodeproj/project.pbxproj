@@ -20,6 +20,8 @@
 		2E2F3E191EB9F86E005A43C0 /* HeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F3E181EB9F86E005A43C0 /* HeaderSectionView.swift */; };
 		2E2F3E1B1EB9FCD6005A43C0 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F3E1A1EB9FCD6005A43C0 /* EventCollectionViewCell.swift */; };
 		2E2F3E1E1EB9FE42005A43C0 /* EventDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F3E1D1EB9FE42005A43C0 /* EventDetailTableViewController.swift */; };
+		2E7B5DFB1EBF514500A64A95 /* AddEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B5DFA1EBF514500A64A95 /* AddEventTableViewController.swift */; };
+		2E7B5DFD1EBF529700A64A95 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7B5DFC1EBF529700A64A95 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		2E2F3E181EB9F86E005A43C0 /* HeaderSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSectionView.swift; sourceTree = "<group>"; };
 		2E2F3E1A1EB9FCD6005A43C0 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		2E2F3E1D1EB9FE42005A43C0 /* EventDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailTableViewController.swift; sourceTree = "<group>"; };
+		2E7B5DFA1EBF514500A64A95 /* AddEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventTableViewController.swift; sourceTree = "<group>"; };
+		2E7B5DFC1EBF529700A64A95 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 				2E2F3E101EB9F5E7005A43C0 /* View */,
 				2E2F3DE51EB9EB26005A43C0 /* Assets.xcassets */,
 				2E2F3DEA1EB9EB26005A43C0 /* Info.plist */,
+				2E7B5DFC1EBF529700A64A95 /* Constants.swift */,
 			);
 			path = ManagerEventCollectionView_Kiet_13110085;
 			sourceTree = "<group>";
@@ -140,8 +145,8 @@
 		2E2F3E101EB9F5E7005A43C0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2E2F3DE71EB9EB26005A43C0 /* LaunchScreen.storyboard */,
 				2E2F3DE21EB9EB26005A43C0 /* Main.storyboard */,
+				2E2F3DE71EB9EB26005A43C0 /* LaunchScreen.storyboard */,
 				2E2F3E181EB9F86E005A43C0 /* HeaderSectionView.swift */,
 				2E2F3E1A1EB9FCD6005A43C0 /* EventCollectionViewCell.swift */,
 			);
@@ -163,6 +168,7 @@
 				2E2F3DE01EB9EB26005A43C0 /* ViewController.swift */,
 				2E2F3E0E1EB9F5DC005A43C0 /* ManagerEventCollectionViewController.swift */,
 				2E2F3E1D1EB9FE42005A43C0 /* EventDetailTableViewController.swift */,
+				2E7B5DFA1EBF514500A64A95 /* AddEventTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -305,6 +311,8 @@
 				2E2F3E1B1EB9FCD6005A43C0 /* EventCollectionViewCell.swift in Sources */,
 				2E2F3E171EB9F735005A43C0 /* EventLine.swift in Sources */,
 				2E2F3E1E1EB9FE42005A43C0 /* EventDetailTableViewController.swift in Sources */,
+				2E7B5DFB1EBF514500A64A95 /* AddEventTableViewController.swift in Sources */,
+				2E7B5DFD1EBF529700A64A95 /* Constants.swift in Sources */,
 				2E2F3DE11EB9EB26005A43C0 /* ViewController.swift in Sources */,
 				2E2F3E191EB9F86E005A43C0 /* HeaderSectionView.swift in Sources */,
 				2E2F3DDF1EB9EB26005A43C0 /* AppDelegate.swift in Sources */,
